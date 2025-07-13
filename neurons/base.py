@@ -243,7 +243,7 @@ class ReinforcedNeuron:
                     self.hotkey, self.config.net_uid, ip=self.settings.relayer_ip, port=self.settings.relayer_port
                 )
                 if result:
-                    self.log.info(f'Axon serving, net uid: {self.config.net_uid}, uid: {uid}, ss58 address: {self.hotkey.ss58_address}')
+                    self.log.info(f'Axon serving, net uid: {self.config.net_uid}, uid: {uid}, ss58 address: {self.hotkey.ss58_address}, ip address: {self.ip}, port: {self.port}')
                     break
                 self.log.warning(f'Unable to perform serve_axon. Need to wait {error["blocks"]} blocks')
             time.sleep(error['blocks'] * 6)
